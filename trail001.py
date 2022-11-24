@@ -30,7 +30,7 @@ while True:
     if strc == "":
         break
 code = "".join(code)
-exec(code)'''
+exec(code)''' 
 
 
 #All credits go to Himanshu Bhandari
