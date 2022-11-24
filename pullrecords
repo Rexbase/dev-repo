@@ -1,0 +1,32 @@
+import sys
+import random
+
+
+i = 0 #Index Number
+n = 3 #maximun number of attempts 
+registry = {}
+
+while (1 < n):
+  num = int(input("""Enter choice: "\n
+  1) READ RECORD\n
+  2) ADD CUSTOMER\n
+  3) SEARCH CUSTOMER\n"""))
+  
+  if (num == 1):
+    print("Read file code: ")
+    print( registry)
+  elif (num == 2):
+    rand_value = random.getrandbits(32)
+    hash =("%032x" % rand_value) [-6:]
+    customer = input("Add customer name: ")
+    registry[hash] = customer
+    print("New record has been added \n for %s with code %s" % (customer, hash))
+  elif(num == 3):
+    code = input("Search customer code: ")
+    if ( code in registry.keys()) :
+      print(registry.get(code))
+    else:
+      print("No such customer exists")
+  i += 1
+print("Program ran successfully\n --------------------- \n")
+sys.exit()
