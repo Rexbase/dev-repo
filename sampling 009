@@ -1,0 +1,177 @@
+# Lists Cheatsheet by Goodnews Rex
+
+x = [1, 2, 3, 4]
+
+# constructing a list - NOTE the double "(("
+print("Constructing a list:")
+x = list((1,2,3,4))
+print(x)
+print("-----------------------------------")
+
+# checking the data type of the list
+print("Checking data type:")
+print(type(x))
+print("-----------------------------------")
+
+# checking if item is in the list
+print("Checking if item is in the list:")
+if 2 in x:
+    print("Yes, 2 is in the x list")
+print("-----------------------------------")
+
+# counting total items in the list
+print("Counting total list items:")
+print(len(x))
+print("-----------------------------------")
+
+# counting how many times an item is in the list
+print("Counting how many times an item is in the list:")
+print(x.count(4))
+print("-----------------------------------")
+
+# accessing items in the list
+print("Accessing list items:")
+print(x[1])
+print("-----------------------------------")
+
+
+# printing the last item of the list
+print("Print the last item:")
+print(x[-1])
+print("-----------------------------------")
+
+# printing the 1st item of the list
+print("Print the 1st item:")
+print(x[0])
+print("-----------------------------------")
+
+# printing every 2nd item
+print("Print every 2nd item:")
+print(x[::2])
+print("-----------------------------------")
+
+# printing starting at the end and stoping before index 1
+print("Print starting at the end and stoping before index 1:")
+print(x[:1:-1])
+print("-----------------------------------")
+
+# printing items in a specific range of the list - NOTE the last item in range is not printed!
+print("Print items in range (note: it skips the last item):")
+print(x[1:3])
+print("-----------------------------------")
+
+# returning the max value
+print("Return the max value:")
+print(max(x))
+print("-----------------------------------")
+
+# returning the min value
+print("Return the min value:")
+print(min(x))
+print("-----------------------------------")
+
+
+# reversing the list 
+print("Reversing the list:")
+x.reverse()
+print(x)
+print("-----------------------------------")
+
+
+# sorting the list in ascending order
+print("Sorting the list in ascending order:")
+x.sort()
+print(x)
+print("-----------------------------------")
+
+# sorting the list in descending order
+print("Sorting the list in descending order:")
+x.sort(reverse = True)
+print(x)
+print("-----------------------------------")
+
+# looping through the list - will print as many lines with the list, as there are list elements
+print("Looping through the list:")
+for i in x:
+    print(x)
+print("-----------------------------------")
+
+# looping through the index numbers (Option 1) - will print 1 item item per line
+print("Looping through the index numbers (Option 1 - For Loop):")
+for i in range(len(x)):
+    print(x[i])
+print("-----------------------------------")
+
+# looping through the index numbers (Option 2) - will print 1 item per line NOTE: you must use i=i+1 at the end
+print("Looping through the index numbers (Option 2 - While Loop):")
+i = 0
+while i < len(x):
+    print(x[i])
+    i = i + 1
+print("-----------------------------------")
+
+# looping with list comprehension (Option 3) - will print 1 item per line
+print("Looping with list comprehension (Option 3):")
+[print(i) for i in x]
+print("-----------------------------------")
+
+# adding items to the end of the list
+print("Adding an item to the end of the list:")
+x.append(13)
+print(x)
+print("-----------------------------------")
+
+# adding items at a specified index
+print("Adding an items at a specified index:")
+x.insert(0, 22)
+print(x)
+print("-----------------------------------")
+
+# extending 1 list with items from another list (or from tuple, set, dict) - will add items at the end
+print("Extending a list with items from another list (Option 1: no brackets):")
+y = ["cat", "dog"]
+x.extend(y)
+print(x)
+print("-----------------------------------")
+
+print("Extending a list with items from another list (Option 2: the brackets will remain):")
+z = ["orange", "banana"]
+x.append(z)
+print(x)
+print("-----------------------------------")
+
+# replacing items in the list
+print("Replacing items in the list:")
+x[1] = 10
+print(x)
+print("-----------------------------------")
+
+# removing 1 item from the list (will only take 1 item)
+print("Removing 1 item from the list:")
+x.remove("dog")
+print(x)
+print("-----------------------------------")
+
+# removing items from a specified index
+print("Removing item with index 6:")
+x.pop(6)
+print(x)
+print("-----------------------------------")
+
+# removing the last item
+print("Removing the last item:")
+x.pop()
+print(x)
+print("-----------------------------------")
+
+# removing the 1st item
+print("Removing the 1st item:")
+del x[0]
+print(x)
+print("-----------------------------------")
+
+# clearing the list
+print("Clearing the list:")
+x.clear()
+print(x)
+print("-----------------------------------")
