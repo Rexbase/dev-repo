@@ -8,7 +8,7 @@
 <body>
 
 <h1>Letter spacing</h1>
-<p>This is a paragraph.</p>
+<p>This contains simple Python codes like games etc...</p>
 
 </body>
 </html>
